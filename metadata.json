@@ -1,0 +1,6 @@
+{
+  "name": "Spidey Focus",
+  "description": "A digital wellbeing and screen time app designed to help you stay focused and reduce distraction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
