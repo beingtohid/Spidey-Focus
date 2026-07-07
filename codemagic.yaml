@@ -2,11 +2,15 @@ workflows:
   simple-workflow:
     name: Native Android
     max_build_duration: 60
+    environment:
+      java: 17
     scripts:
+      - name: Generate Gradle wrapper (AGP 9.1.1 requires Gradle 9.1.0+)
+        script: gradle wrapper --gradle-version 9.4.1
       - name: Run tests
-        script: gradle test
+        script: ./gradlew test
       - name: Build debug apk
-        script: gradle assembleDebug
+        script: ./gradlew assembleDebug
     artifacts:
       - app/build/**/outputs/**/*.apk
     publishing:
